@@ -68,7 +68,7 @@ while True:
             (startX, startY, endX, endY) = box.astype("int")
 
             label = "{}: {:.2f}%".format(CLASSES[idx], confidence * 100)
-            print("Object detected:", label)
+            print(f"Frame {frame_count} - Object detected: {label}")
 
             cv2.rectangle(frame, (startX, startY), (endX, endY), COLORS[idx], 2)
             y = startY - 15 if startY - 15 > 15 else startY + 15
